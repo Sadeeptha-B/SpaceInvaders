@@ -17,7 +17,7 @@ const files = fs.readdirSync('.')
 
 module.exports = {
   mode: "development",
-  watch: true,
+  watch: false,
   watchOptions: {
     ignored: files
   },
