@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <style>
+
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+                font-family: 'Bebas Neue', cursive;
+                transform-box: fill-box;
+            }
+
+            .themeColor{
+                fill: rgb(51,255, 0)
+            }
+
+            .enemy{
+                height: 75;
+                width: 50;
+            }
+            
+            .score{
+                fill: white;
+                font-size:30px;
+            }
+
+            .successBanner{
+                fill: rgb(51,255, 0);
+                font-size:100px;
+            }
+
+            .failBanner{
+                fill: red;
+                font-size:100px;
+            }
+
+        </style>
+        <script src="./dist/spaceinvaders.js"></script>
+    </head>
+    <body>
+        <h1>Space Invaders</h1>
+        <svg id="canvas" width="600" height="600">
+            <g class ="score">
+                <text x="20", y="35">Score</text>
+                <text x="90", y="35", id="points">0</text>
+                <text x="150", y="35",>Level</text>
+                <text x="220", y="35", id="level">1</text>
+            </g>
+            <g id="ship" transform="translate(300, 565)">
+                <polygon class="themeColor" points="
+                -21,0 -21,3 -25,3 -25,18 25,18 25,3 21,3 21,0 5,0 5,-6 1,-6 1,-10 -1,-10 -1,-6 -5,-6 -5,0"></polygon>
+            </g>   
+            <g id="shield1" transform="translate(70, 492)">
+                <polygon class="themeColor" points="
+                -5,0 -5,4 -9,4 -9,8 -11,8 -11,12 -13,12 -13,16 -15,16 -15,33 -33,33 -33,-13 
+                -31,-13 -31,-15 -29,-15 -29,-17 -27,-17 -27,-19 27,-19 27,-17 29,-17 29,-15 
+                31,-15 31,-13 33,-13 33,33 15,33 15,16 13,16 13,12 11,12 11,8 9,8 9,4 5,4 5,0
+                "></polygon>
+            </g>   
+
+            <g id="shield2" transform="translate(220, 492)">
+                <polygon class="themeColor" points="
+                -5,0 -5,4 -9,4 -9,8 -11,8 -11,12 -13,12 -13,16 -15,16 -15,33 -33,33 -33,-13 
+                -31,-13 -31,-15 -29,-15 -29,-17 -27,-17 -27,-19 27,-19 27,-17 29,-17 29,-15 
+                31,-15 31,-13 33,-13 33,33 15,33 15,16 13,16 13,12 11,12 11,8 9,8 9,4 5,4 5,0
+                "></polygon>
+            </g>   
+
+            <g id="shield3" transform="translate(370, 492)">
+                <polygon class="themeColor" points="
+                -5,0 -5,4 -9,4 -9,8 -11,8 -11,12 -13,12 -13,16 -15,16 -15,33 -33,33 -33,-13 
+                -31,-13 -31,-15 -29,-15 -29,-17 -27,-17 -27,-19 27,-19 27,-17 29,-17 29,-15 
+                31,-15 31,-13 33,-13 33,33 15,33 15,16 13,16 13,12 11,12 11,8 9,8 9,4 5,4 5,0
+                "></polygon>
+            </g>   
+
+            <g id="shield4" transform="translate(520, 492)">
+                <polygon class="themeColor" points="
+                -5,0 -5,4 -9,4 -9,8 -11,8 -11,12 -13,12 -13,16 -15,16 -15,33 -33,33 -33,-13 
+                -31,-13 -31,-15 -29,-15 -29,-17 -27,-17 -27,-19 27,-19 27,-17 29,-17 29,-15 
+                31,-15 31,-13 33,-13 33,33 15,33 15,16 13,16 13,12 11,12 11,8 9,8 9,4 5,4 5,0
+                "></polygon>
+            </g>   
+   
+                <!-- <path style="fill:white; height:25; width:25" d="M469.344,266.664v-85.328h-42.656v-42.672H384v-21.328h42.688v-64h-64v42.656H320v42.672H192V95.992
+	h-42.656V53.336h-64v64H128v21.328H85.344v42.672H42.688v85.328H0v149.328h64v-85.328h21.344v85.328H128v42.672h106.688v-64h-85.344
+	v-21.328h213.344v21.328h-85.344v64H384v-42.672h42.688v-85.328H448v85.328h64V266.664H469.344z M192,245.336h-64v-64h64V245.336z
+	 M384,245.336h-64v-64h64V245.336z"/> 
+           -->
+            
+        </svg>
+        <div id="controls">
+        <h2>Controls:</h2>
+        <table>
+            <!-- <tr><td>Thrust</td><td>Up Arrow</td></tr> -->
+            <tr><td>Turn Left</td><td><div id="ArrowLeft" class="key">&#8678;</div></td></tr>
+            <tr><td>Turn Right</td><td><div id="ArrowRight" class="key">&#8680;</div></td></tr>
+            <tr><td>Fire</td><td><div id="Space" class="key" style="width:50px">Space</div></td></tr>
+            <tr><td>Restart Game</td><td>R</td></tr> 
+            <!-- <tr><td>Fire</td><td>Space</td> -->
+        </table>
+        </div>
+    </body>
+</html>
