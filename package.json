@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "anymatch": "^3.1.1",
+    "express": "^4.17.1",
     "rxjs": "^6.6.0"
   }
 }
