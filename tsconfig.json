@@ -7,6 +7,7 @@
           "DOM.Iterable"
         ],
         "target": "es2019",
+        "types": [],
         "esModuleInterop": true,
         "sourceMap": true,
         "baseUrl": ".",

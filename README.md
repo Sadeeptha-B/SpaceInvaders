@@ -10,13 +10,17 @@ Credit to https://tgdwyer.github.io/asteroids/ for inspiring the code architectu
 
 ## Running locally
 
-To build and run this project on your machine, you should have Node.js v16 installed on your system. v18 and above may introduce some build errors.
+To build this project on your machine, you should have a current Node.js LTS (v20 or v22) installed.
 
 Build the project with,
 ```
 npm install
 npm run build
 ```
+
+This bundles `spaceinvaders.ts` into `spaceinvaders.js`. Open `index.html` in a browser to play.
+
+To rebuild automatically while editing the source, run `npm run watch`.
 
 
 
