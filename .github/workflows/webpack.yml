@@ -1,8 +1,7 @@
 name: NodeJS with Webpack
 
+# Build validation for pull requests. Deployment of `main` is handled by deploy.yml.
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
